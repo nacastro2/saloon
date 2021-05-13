@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml> version="2.0">
+                                //saludos
+<category>
+<pattern>Hola *</pattern>
+<template> <image>https://i.postimg.cc/t43j3NDt/Logosalon.png</image>
+Hola, te doy la bienvenida al salon de belleza. Me gustaría saber cual es tu nombre para poder 
+tener una mejor conversación.</template>
+</category>
+ 
+ <category>
+<pattern>hola </pattern>
+<template><srai>Hola *</srai></template>
+</category>
+ 
+<category>
+<pattern>Buenas *</pattern>
+<template><srai>Hola *</srai></template>
+</category>
+ 
+<category>
+<pattern>Buenos *</pattern>
+<template><srai>Hola *</srai></template>
+</category>
+                                         //Nombre
+<category>
+<pattern>Me llamo *</pattern>
+<template> <image>https://i.picasion.com/pic90/a5b06cd3a281cc41f0defb4aede51123.gif</image> 
+Hola <set name="nombre"> <star/> ,te saluda Jamp el asistente de Salontes en que te puedo ayudar</set></template>
+</category>
+   
+ <category>
+<pattern>Mi nombre es *</pattern>
+<template><image>https://i.picasion.com/pic90/a5b06cd3a281cc41f0defb4aede51123.gif</image>          
+Hola <set name="nombre"> <star/> ,te saluda Jamp el asistente de Salontes en que te puedo ayudar</set></template>
+</category>                          
+ 
+ <category>
+<pattern>Soy  *</pattern>
+<template><image>https://i.picasion.com/pic90/a5b06cd3a281cc41f0defb4aede51123.gif</image>          
+Hola <set name="nombre"> <star/> , te saluda Jamp el asistente de Salontes en que te puedo ayudar</set></template>
+</category>                          
+
+
+                                        //Servicios
+<category>
+<pattern>Que * </pattern>
+<template>
+<card><title>Los servicios que tenemos son: </title>
+<image>https://i.postimg.cc/90Kg40kN/SERVICIOS.png</image> 
+<subtitle>Keratina-Corte de cabello-Peinado-Manicure-Maquillaje-Pedicure-Tinturdo</subtitle>
+</card>
+</template>
+</category>
+               
+               
+               
+                                             / /Manicure 
+<category>
+<pattern>_ hacerme un manicure </pattern>
+<template> <image>https://media1.tenor.com/images/6a7772a26fb93fd61aee814cd0d8ba62/tenor.gif?itemid=12965409</image>
+El precio de este servicio es de 5$: <star/>
+<reply>
+<text>Si</text>
+<postback>si</postback>
+</reply>
+<reply>
+<text>No</text>
+<postback>no</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>quiero pintarme las uñas de las manos </pattern>
+<template><srai>_ hacerme un manicure</srai></template>
+</category>
+
+<category>
+<pattern>quiero hacerme un diseño en la mano </pattern>
+<template><srai>_ hacerme un manicure</srai></template>
+</category>
+
+<category>
+<pattern>quiero arreglarme las uñas de las manos </pattern>
+<template><srai>_ hacerme un manicure</srai></template>
+</category>
+                                            //Pedicure
+<category>
+<pattern> _ hacerme un pedicure</pattern>
+<template><image>https://img1.picmix.com/output/pic/normal/2/9/6/3/6723692_12c38.gif</image>
+El precio de este servicio es de 5$: <star/>
+<reply>
+<text>Si</text>
+<postback>si</postback>
+</reply>
+<reply>
+<text>No</text>
+<postback>no</postback>
+</reply>
+</template>
+</category>
+<category>
+<pattern>quiero pintarme las uñas de los pies </pattern>
+<template><srai>_ hacerme un pedicure</srai></template>
+</category>
+
+<category>
+<pattern>quiero hacerme un diseño en los pies  </pattern>
+<template><srai>_ hacerme un pedicure</srai></template>
+</category>
+
+<category>
+<pattern>quiero arreglarme las uñas de los pies </pattern>
+<template><srai>_ hacerme un pedicure</srai></template>
+</category>
+
+
+                                       //Corte de cabello
+<category>
+<pattern>_ un Corte de cabello  </pattern>
+<template> <image>https://i.pinimg.com/originals/0d/f0/5f/0df05feac1f26be978e10d052bbb856c.gif</image>
+El precio de este servicio es de 5 $: <star/>
+<reply>
+<text>Si</text>
+<postback>si</postback>
+</reply>
+<reply>
+<text>No</text>
+<postback>no</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>quiero rebajarme *  </pattern>
+<template><srai>_ un Corte  de cabello </srai></template>
+</category>
+
+<category>
+<pattern>_ un nuevo look</pattern>
+<template><srai>_ hacerme un Corte de cabello </srai></template>
+</category>
+                                        //Tinturado
+<category>
+<pattern> _ tinturado </pattern>
+<template> <image>https://lh3.googleusercontent.com/proxy/NRjkauB5YyFazDS2RSm0jTGVK9HzV4IhLK2680Ry9dsfU4jOYNsC-ClVa8GY-zvm5PjczXYK5_4uok5xbtAKSNv1wJqzVcucIEk-b7hyF24rvL3kJIwwvohxzmg8GX9zrKaMJiqmNoOSUW_deWC8qLubHeYX0J-7</image>
+El precio de este servicio es de 40$: <star/>
+<reply>
+<text>Si</text>
+<postback>si</postback>
+</reply>
+<reply>
+<text>No</text>
+<postback>no</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>_ pintarme el pelo </pattern>
+<template><srai>_ hacerme un  tinturado </srai></template>
+</category>
+
+<category>
+<pattern>_ rayitos  </pattern>
+<template><srai>_ hacerme un tinturado </srai></template>
+</category>
+                                    //Keratina
+<category>
+<pattern> _ keratina </pattern>
+<template><image>https://media.giphy.com/media/SQMWWtVq1lAas/giphy.gif</image>
+El precio de este servicio es 120$: <star/>
+<reply>
+<text>Si</text>
+<postback>si</postback>
+</reply>
+<reply>
+<text>No</text>
+<postback>no</postback>
+</reply>
+</template>
+</category>
+                                            //Maquillaje
+<category>
+<pattern> _ maquillaje  </pattern>
+<template> <image>https://s.yimg.com/ny/api/res/1.2/j_wj24BNBwRY_RKeBCv3bQ--/YXBwaWQ9aGlnaGxhbmRlcjtoPTY2Ng--/http://38.media.tumblr.com/d728bb690d72f9be47b9f9cf2bf26553/tumblr_nf7ur6lXAX1r2nmjyo1_500.gif</image>
+El precio de este servicio es 25$: <star/>
+<reply>
+<text>Si</text>
+<postback>si</postback>
+</reply>
+<reply>
+<text>No</text>
+<postback>no</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>_ maquillarme *</pattern>
+<template><srai>_ maquillaje</srai></template>
+</category>
+<category>
+<pattern>_ ponerme *</pattern>
+<template><srai>_ maquillaje </srai></template>
+</category>
+                                         //Peniando
+<category>
+<pattern>_ peinado * </pattern>
+<template><image>https://img.culturacolectiva.com/content/2017/04/Corte-De-Cabello-Mediano-En-Capas-cambio.gif</image>
+El precio de este servicio es 20$: <star/>
+<reply>
+<text>Si</text>
+<postback>si</postback>
+</reply>
+<reply>
+<text>No</text>
+<postback>no</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>_ hacerme *</pattern>
+<template><srai>_ peinado *</srai></template>
+</category>
+                         //botones de servicios 
+<category>
+<pattern>no</pattern>
+<template> Gracias por escribirnos esperamos que pueda volver pronto
+</template>
+</category>
+
+<category>  
+<pattern>si</pattern>
+<template> Entonces a que horario te gustaria venir.
+</template>
+</category>
+                         //horarios
+<category>
+<pattern> Que horarios  * </pattern>
+<template>Los horarios que tenemos disponibles son: 
+Lunes a viernes 8:00 a 17: 00 - Sábados 8:00 a 14:00: </template>
+</category>
+
+
+<category>
+<pattern> cual es el  * </pattern>
+<template>Los horarios que tenemos disponibles son: 
+Lunes a viernes 8:00 a 17: 00 - Sábados 8:00 a 14:00: </template>
+</category>
+
+
+<category>
+<pattern>A que hora *</pattern>
+<template><srai>Que horarios  *</srai></template>
+</category>
+
+<category>
+<pattern> que dias *</pattern>
+<template><srai>Que horarios  *</srai></template>
+</category>
+
+<category>
+<pattern> cuales son *</pattern>
+<template><srai>Que horarios  *</srai></template>
+</category>
+                           ///cita
+<category>
+<pattern> Quiero ir el * </pattern>
+<template>
+<think> <set  name="dias"> <star/></set></think>
+Ok listo, los horarios que tenemos disponibles son:
+<reply>
+<text>8:00</text>
+<postback>ocho</postback>
+</reply>
+
+<reply>
+<text>9:00</text>
+<postback>nueve</postback>
+</reply>
+
+<reply>
+<text>10:00</text>
+<postback>diez</postback>
+</reply>
+    
+<reply>
+<text>11:00</text>
+<postback>once</postback>
+</reply>
+
+<reply>
+<text>12:00</text>
+<postback>doce</postback>
+</reply>
+    
+<reply>
+<text>13:00</text>
+<postback>una</postback>
+</reply>
+
+<reply>
+<text>14:00</text>
+<postback>dos</postback>
+</reply>
+   
+<reply>
+<text>15:00</text>
+<postback>tres</postback>
+</reply>
+    
+<reply>
+<text>16:00</text>
+<postback>cuatro</postback>
+</reply>
+
+<reply>
+<text>17:00</text>
+<postback>cinco</postback>
+</reply>
+    
+<reply>
+<text>18:00</text>
+<postback>seis</postback>
+</reply>
+</template>
+</category>
+
+
+<category>
+<pattern> Me gustaria ir el * </pattern>
+<template>
+<think> <set  name="dias"> <star/></set></think>
+Ok listo, los horarios que tenemos disponibles son:
+<reply>
+<text>8:00</text>
+<postback>ocho</postback>
+</reply>
+
+<reply>
+<text>9:00</text>
+<postback>nueve</postback>
+</reply>
+
+<reply>
+<text>10:00</text>
+<postback>diez</postback>
+</reply>
+    
+<reply>
+<text>11:00</text>
+<postback>once</postback>
+</reply>
+
+<reply>
+<text>12:00</text>
+<postback>doce</postback>
+</reply>
+    
+<reply>
+<text>13:00</text>
+<postback>una</postback>
+</reply>
+
+<reply>
+<text>14:00</text>
+<postback>dos</postback>
+</reply>
+   
+<reply>
+<text>15:00</text>
+<postback>tres</postback>
+</reply>
+    
+<reply>
+<text>16:00</text>
+<postback>cuatro</postback>
+</reply>
+
+<reply>
+<text>17:00</text>
+<postback>cinco</postback>
+</reply>
+    
+<reply>
+<text>18:00</text>
+<postback>seis</postback>
+</reply>
+</template>
+</category>
+         //configuracion de botones de citas
+<category>
+<pattern> ocho  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 8:00.
+</template>
+</category>
+    
+<category>
+<pattern> nueve </pattern>
+<template>
+Entonces te esparamos el <get name ="dias"> </get> a las 9:00.
+</template>
+</category>
+    
+<category>
+<pattern>diez  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 10:00.
+</template>
+</category>
+    
+<category>
+<pattern> once  </pattern>
+<template>
+Entonces te esparamos el <get name ="dias"> </get> a las 11:00.
+</template>
+</category>
+    
+<category>
+<pattern> doce  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 12:00.
+</template>
+</category>
+    
+<category>
+<pattern> una  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 13:00.
+</template>
+</category>
+    
+<category>
+<pattern> dos  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 14:00.
+</template>
+</category>
+    
+<category>
+<pattern> tres  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 15:00.
+</template>
+</category>
+    
+ <category>
+<pattern> cuatro  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 16:00.
+</template>
+</category>
+    
+<category>
+<pattern> cinco  </pattern>
+<template>
+Entonces te esparamos el <get name ="dias"> </get> a las 17:00.
+</template>
+</category>
+    
+<category>
+<pattern> seis  </pattern>
+<template> 
+Entonces te esparamos el <get name ="dias"> </get> a las 18:00.
+</template>
+</category>
+                                //redes sociales
+<category>
+<pattern>_ alguna *</pattern>
+<template>las siguientes redes sociales que manejamos son: 
+<button>
+<text>Facebook</text>
+<url>https://www.facebook.com/Beast.Fashion.2015/</url>
+</button>
+<button>
+<text>Instagram</text>
+<url>https://www.instagram.com/mike.salon_restrepo/</url>
+</button>
+</template>
+</category>
+
+<category>
+<pattern>_ tienes *</pattern>
+<template>las siguientes redes sociales que manejamos son: 
+<button>
+<text>Facebook</text>
+<url>https://www.facebook.com/Salontes-103890591884094</url>
+</button>
+<button>
+<text>Instagram</text>
+<url>https://www.instagram.com/mike.salon_restrepo/</url>
+</button>
+</template>
+</category>
+
+                                //   union de citas 
+<category>
+<pattern>_ deseo un *  </pattern>
+<template><srai>si</srai></template>
+</category>
+
+<category>
+<pattern>_ quiero un *  </pattern>
+<template><srai>si </srai></template>
+</category>
+             
+                  //// cancelar cita
+<category>
+<pattern>_ cancelar la cita *</pattern>
+<template>Si quiere le podemos reagendar la cita. Usted decide!!!! 
+<reply>
+<text>Reagendar </text>
+<postback>siR</postback>
+</reply>
+<reply>
+<text>Cancelar </text>
+<postback>noC</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>_ anular la *</pattern>
+<template>Si quiere le podemos reagendar la cita. Usted decide!!!! 
+<reply>
+<text>Reagendar </text>
+<postback>siR</postback>
+</reply>
+<reply>
+<text>Cancelar </text>
+<postback>noC</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern> siR </pattern>
+<template>
+¿Què dia te gustaria que te reagendemos la cita? </template>
+</category>
+    
+<category>
+<pattern>noC  </pattern>
+<template> 
+Gracias por comunicarte con nosotros 
+</template>
+</category>
+
+<category>
+<pattern>_ cancelar *</pattern>
+<template><srai>_ cancelar la cita *</srai> </template>
+</category>
+                  //direccion 
+<category>
+<pattern>donde estan ubicados </pattern>
+<template>Nos puedes encontrar en los siguientes sectores:
+    <reply>
+<text>Centro </text>
+<postback>CT</postback>
+</reply>
+<reply>
+<text>Sur </text>
+<postback>Su</postback>
+</reply>
+<reply>
+<text>Norte </text>
+<postback>Nor</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>donde se encuentran ubicados </pattern>
+<template>Nos puedes encontrar en los siguientes sectores:
+    <reply>
+<text>Centro </text>
+<postback>CT</postback>
+</reply>
+<reply>
+<text>Sur </text>
+<postback>Su</postback>
+</reply>
+<reply>
+<text>Norte </text>
+<postback>Nor</postback>
+</reply>
+</template>
+</category>
+
+<category>
+<pattern>_ encontrar </pattern>
+<template><srai>donde estan ubicados</srai> </template>
+</category>
+
+<category>
+<pattern>_ ubicacion </pattern>
+<template><srai>donde estan ubicados</srai> </template>
+</category>
+                         //botones de ubicacion
+<category>
+<pattern> Nor </pattern>
+<template>La ubicacion del norte es: <br/>
+Av. Narcisa de Jesús. Autopista terminal terrestre (Calle Principal). 
+A la altura de Vergeles. <br/>
+(Del Terminal, hacia Pascuales del lado derecho
+pasando puente nuevo q une Sauces con Vía Samborondón.
+<button>
+<text>Como llegar</text>
+<url>https://moovitapp.com/guayaquil-5550/poi/Autopista%20Terminal%20Terrestre%20Pascuales%20~2F%20Av.%20Narcisa%20de%20Jesus/t/es-419?tll=-2.0891_-79.89536</url>
+</button>
+</template>
+</category>
+
+<category>
+<pattern> CT </pattern>
+<template>La ubicacion del centro es: <br/>
+Calle Lorenzo  Garaicoa y Alcedo esquina.
+<button>
+<text>Como llegar</text>
+<url>https://moovitapp.com/guayaquil-5550/poi/Lorenzo%20de%20Garaycoa%20~2F%20Alcedo/t/es-419?tll=-2.19662_-79.8877</url>
+</button>
+</template>
+</category>
+
+<category>
+<pattern> Su </pattern>
+<template>La ubicacion del sur es: <br/>
+Calle 19 y PORTETE esquina (Frente a la iglesia Virgen de Fátima) Diagonal a banco internacional
+<button>
+<text>Como llegar</text>
+<url>https://moovitapp.com/guayaquil-5550/poi/Portete%20de%20Tarqui%20~2F%2019/t/es-419?tll=-2.20129_-79.91778</url>
+</button>
+</template>
+</category>
+
+<category>
+    <pattern>Click node to edit pattern</pattern>
+    <template>Click node to edit template</template>
+</category>
+</aiml>
